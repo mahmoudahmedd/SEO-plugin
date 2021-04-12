@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>SEO Plugin</name>
+    <author>Mahmoud Ahmed</author>
+    <creationDate>Jan 2021</creationDate>
+    <copyright>Copyright (C) 2021</copyright>
+    <license>GNU/GPL</license>
+    <authorEmail>mahmoud_ahmed@stud.fci-cu.edu.eg</authorEmail>
+    <authorUrl>mahmoud-ahmed.me</authorUrl>
+    <version>1.0.0</version>
+    <description>This Joomla plugin helps you to stay ahead.</description>
+    <files>
+        <filename plugin="SEOPlugin">SEOPlugin.php</filename>
+		<filename>index.html</filename>
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Basic SEOPlugin Settings">
+				<field name="t_length" type="text" size="5" default="155" label="Meta Description Length:" description="The length of the meta description content." /> 
+
+				<field name="r_content" type="radio" default="0" label="Front Page Meta Desc:" description="Choose whether to use the config settings or generate grom content.">
+					<option value="0">Use Config Setting</option>
+					<option value="1">Generate From Content</option>
+				</field>		
+			
+				<field name="spacer1" type="spacer"	hr="true" />
+
+				<field name="r_desc" type="radio" default="0" label="Category Meta Desc:" description="Choose whether to use the category description or generate from content.">
+					<option value="0">Use Category Description</option>
+					<option value="1">Generate From Content</option>
+				</field>
+			</fieldset>
+				
+			<fieldset name="titsettings" label="Title Tag Settings">
+				<field name="titorder" type="list" default="0" label="Page Title Layout:" description="Select how you'd like your page titles to be displayed. Default is [Page Title - Joomla Default].">
+					<option value="0">[Page Title - Joomla Default]</option>
+					<option value="1">[Page Title] | [Site Title]</option>
+					<option value="2">[Site Title] | [Page Title]</option>
+				</field>		
+					
+				<field name="spacer2" type="spacer"	hr="true" />
+			
+				<field name="l_title_layout" type="list" default="0" label="Front Page Title Layout:" description="Select how you would like to display your front page title.">
+					<option value="0">[Disable - Joomla Default]</option>
+					<option value="1">[Custom Title] | [Site Title]</option>
+					<option value="2">[Site Title] | [Custom Title]</option>
+					<option value="3">[Custom Title]</option>
+					<option value="4">[Site Title]</option>
+					<option value="5">[Site Title] | [Default Title]</option>
+					<option value="6">[Default Title] | [Site Title]</option>
+					<option value="7">[Custom Title] | [Default Title]</option>
+					<option value="8">[Default Title] | [Custom Title]</option>
+				</field>		
+		
+				<field name="custom_title" type="text" size="40" default="Home" label="Custom Title:" description="Enter a title for your front page." />
+
+				<field name="spacer" type="spacer"	hr="true" />
+		
+				<field name="separator" type="text" size="1" default="|" label="Separator:" description="Enter a character that separates your page title." />
+			</fieldset>	
+    	</fields>
+	</config>
+</extension>
